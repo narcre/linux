@@ -1,4 +1,8 @@
-## Info
+## OS 
+```
+```
+
+## Hard ware
 ```
 sudo lshw 
 sudo lshw –short
@@ -13,12 +17,21 @@ hwinfo –short
 lspci
 lsscsi
 lsusb
+```
+
+## Disk
+```
 lsblk
 df -H
+```
+
+## cpu
+```
+lscpu
 ```
 
 ## GPU Driver
 
 ```
-cat /proc/driver/nvidia/version
+
 ```
