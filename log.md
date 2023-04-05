@@ -18,4 +18,9 @@ last
 last -x
 last -x reboot
 last -x shutdown
+
+
+uptime -s
+
+last reboot
 ```
