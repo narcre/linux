@@ -22,12 +22,6 @@ lsscsi
 lsusb
 ```
 
-## Disk
-```
-lsblk
-df -H
-```
-
 ## File & Directory
 ```
 du -sh
