@@ -1,5 +1,8 @@
 ## OS 
 ```
+uname -m
+uname -a
+lsb_release -a
 ```
 
 ## Hard ware
@@ -30,8 +33,3 @@ df -H
 lscpu
 ```
 
-## GPU Driver
-
-```
-
-```
