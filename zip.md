@@ -13,3 +13,10 @@ unzip x.zip
 ```
 tar -xvf filename.tar.xz
 ```
+
+
+## rar
+```
+apt install unrar
+unrar e filename.rar
+```
