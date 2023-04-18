@@ -1,6 +1,8 @@
 ## Zip
 ```
 apt install zip unzip
+
+zip -r compressed_filename.zip foldername
 ```
 
 ```
