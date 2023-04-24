@@ -1,6 +1,16 @@
+##### flush dns
+
+###### Ubuntu
+```
+sudo apt install dnsutils
 sudo resolvectl flush-caches 
 
- sudo apt install dnsutils
- 
- sudo systemd-resolve --flush-caches
- sudo systemctl restart systemd-resolved
+sudo systemd-resolve --flush-caches
+sudo systemctl restart systemd-resolved
+```
+
+###### windows
+
+```
+ipconfig /flushdns
+```
