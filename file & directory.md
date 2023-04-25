@@ -10,3 +10,9 @@ ls -lrt --block-size=GB
 
 ls -la
 ```
+
+## access
+####### readonly
+```
+chmod 400 filename
+```
