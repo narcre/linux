@@ -12,7 +12,7 @@ ls -la
 ```
 
 ## access
-####### readonly
+###### readonly
 ```
 chmod 400 filename
 ```
