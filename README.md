@@ -33,3 +33,13 @@ lsusb
 ```
 lscpu
 ```
+
+## دما
+```
+sudo apt install hddtemp lm-sensors
+sensors
+sudo hddtemp /dev/sda   
+
+
+sudo apt-get install hardinfo
+```
