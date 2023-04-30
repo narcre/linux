@@ -1,3 +1,8 @@
+## dmesg
+```
+dmesg | grep -i memory
+```
+
 ## OS 
 ```
 uname -m
