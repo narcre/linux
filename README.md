@@ -1,3 +1,5 @@
+## lsmod
+
 ## dmesg
 ```
 dmesg | grep -i memory
