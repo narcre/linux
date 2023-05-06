@@ -5,6 +5,10 @@
 dmesg | grep -i memory
 ```
 
+## Memory
+```
+grep MemTotal /proc/meminfo || free -g
+```
 ## OS 
 ```
 uname -m
