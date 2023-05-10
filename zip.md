@@ -19,4 +19,5 @@ tar -xvf filename.tar.xz
 ```
 apt install unrar
 unrar e filename.rar
+tar –xvzf documents.tar.gz
 ```
