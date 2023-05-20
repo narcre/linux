@@ -31,4 +31,10 @@ mount /dev/vdb1 /mnt
 mount | grep "/dev/vdb"
 umount /dev/vdb1
 
+
+apt-get install ntfs-3g
+sudo mount -t ntfs /dev/sdb1 /mnt/ntfs1
+
+
+
 ```
