@@ -14,6 +14,9 @@ apt-get update --allow-insecure-repositories
 ## proxy
 ```
 sudo nano /etc/apt/apt.conf
+/etc/apt/apt.conf.d/proxy.conf
+
+
 Acquire::http::Proxy "http://yourproxyaddress:proxyport";
 
 ```
