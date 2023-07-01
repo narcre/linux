@@ -1,6 +1,7 @@
 ## apt
 ```
 apt list -a --installed
+sudo apt --fix-broken install
 ```
 
 ## insecute repo add
