@@ -1,3 +1,13 @@
+## rsync options
+```
+-vr --verbose --recursive
+-r  => or -a
+--exclude=file or directory(use , for multi dir)
+--dry-run or -n  ==> use -avn
+--delete ==> for sync if files deleted from source
+-azP ==> zip file for transfer (optimizing the bandwidth) with progress bar
+```
+
 ## Backup & Restore Snario
 
 ##### Backup
