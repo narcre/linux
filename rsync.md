@@ -15,7 +15,7 @@
 DESTINATIONS="192.168.10.13"
 
 for HOST in ${DESTINATIONS}; do
-	rsync -a sample-dir/  databackup@${HOST}:/home/databackup/sample-dir --log-file=result
+	rsync -a sample-dir/ -e "ssh -i $HOME/.ssh/somekey" databackup@${HOST}:/home/databackup/sample-dir --log-file=result
 done
 ```
 ##### Restore
