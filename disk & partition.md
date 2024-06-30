@@ -38,3 +38,20 @@ sudo mount -t ntfs /dev/sdb1 /mnt/ntfs1
 
 
 ```
+```
+
+
+sudo vgcreate foo /dev/sda1
+sudo lvcreate --name bar --size 5g foo
+sudo mkfs -t ext4 /dev/mapper/hdd--vg-hdd--lv1
+vgdisplay
+lvdisplay
+blkid /dev/vg00/vol_projects
+mkdir /home/projects
+
+nano etc/fstab
+UUID=b85df913-580f-461c-844f-546d8cde4646 /home/projects	ext4 defaults 0 0
+mount -a
+```
+##### [how-to-manage-logical-volumes](https://ubuntu.com/server/docs/how-to-manage-logical-volumes)
+##### [manage-and-create-lvm-parition-using-vgcreate-lvcreate-and-lvextend](https://www.tecmint.com/manage-and-create-lvm-parition-using-vgcreate-lvcreate-and-lvextend/)
