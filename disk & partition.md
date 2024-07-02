@@ -78,3 +78,4 @@ w
 ```
 pv  create => if donot have pv => fdisk => use n => for create new partition in existing pv =>  vgextend [existing volume group newpartion] => for extend size of volume group => extend existing lvm size by => lvextend -l +100%FREE -r [lvm name] ==> get lvm name => with lvdisplay
 ```
+#نکته : درصورتیکه سایز پارتیشن قبلی افزایش داده شود بازهم امکان تغییر vg نیست تازمانیکه پارتیشن جدیدی در pv ایجاد گردد و vg اکستند شود
