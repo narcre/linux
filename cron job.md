@@ -30,8 +30,13 @@ crontab -e
 0 0 * * *
 every day
 ```
-https://crontab-generator.org/ <br>
-https://crontab.cronhub.io/
+
+### http://www.crontabgenerator.com/ <br>
+
+
+ https://crontab-generator.org/ <br>
+ https://crontab.cronhub.io/
+
 
 
 
