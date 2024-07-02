@@ -55,3 +55,15 @@ mount -a
 ```
 ##### [how-to-manage-logical-volumes](https://ubuntu.com/server/docs/how-to-manage-logical-volumes)
 ##### [manage-and-create-lvm-parition-using-vgcreate-lvcreate-and-lvextend](https://www.tecmint.com/manage-and-create-lvm-parition-using-vgcreate-lvcreate-and-lvextend/)
+### [CREATE NEW PARTITION](https://gcore.com/learning/how-to-partition-a-disk-in-linux/)
+```
+sda 300G
+sda1 => 70G
+for extend :
+parted /dev/sda
+unit s print free
+resizepart 1
+-0   ====> extend to end of free space of disk
+or
+xxxx ===> NEW END
+```
