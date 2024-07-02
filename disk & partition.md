@@ -66,4 +66,15 @@ resizepart 1
 -0   ====> extend to end of free space of disk
 or
 xxxx ===> NEW END
+
+vgextend ubuntu-vg /dev/sda3
+```
+```
+fdisk /dev/sda
+n
+p
+w
+```
+```
+pv  create => if donot have pv => fdisk => use n => for create new partition in existing pv =>  vgextend [existing volume group newpartion] => for extend size of volume group => extend existing lvm size by => lvextend -l +100%FREE -r [lvm name] ==> get lvm name => with lvdisplay
 ```
