@@ -32,3 +32,18 @@ every day
 ```
 https://crontab-generator.org/ <br>
 https://crontab.cronhub.io/
+
+
+
+```
+#!/bin/bash
+time=$(date +%k%M)
+
+if [[ "$time" -ge 1700 ]];then
+    echo "Backlight on"
+    xset led 3
+else
+    echo "Backlight off"
+    xset -led 3
+fi
+```
