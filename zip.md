@@ -34,6 +34,10 @@ tar -tf myfolder.tar.gz
 ```
 tar zcvf - /tmp/temp/ | ssh user@x.x.x.x "cat > /backup/server/mytar.tar.gz"
 ```
+###### compress directory and decompress into target
+```
+sudo tar -zc /tmp/temp/ | ssh ftp@93.118.97.231 tar -zxC /backup-1/server-11/
+```
 
 ## rar
 ```
