@@ -18,4 +18,8 @@ sudo usermod -aG sudo esmaeili
 ```
 sudo chown -R esmaeili:esmaeili *
 ```
-
+# Disable the Password for the Sudo Command
+```
+sudo visudo
+username ALL=(ALL) NOPASSWD: ALL
+```
