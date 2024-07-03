@@ -25,6 +25,11 @@ sudo tar -czvf narcre.tar.gz python3.8/
 
 sudo tar -xzvf narcre.tar.gz 
 ```
+
+###### To view the contents of the myfolder.tar.gz directory
+```
+tar -tf myfolder.tar.gz
+```
 ###### compress directory and copy it into remote host
 ```
 tar zcvf - /tmp/temp/ | ssh user@x.x.x.x "cat > /backup/server/mytar.tar.gz"
