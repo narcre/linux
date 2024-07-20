@@ -1,6 +1,8 @@
 ## Create:
 ```
 sudo adduser newuser
+-- create user
+useradd --no-create-home --shell /bin/false prometheus-libvirt-exporter
 ```
 
 
