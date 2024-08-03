@@ -1,0 +1,9 @@
+```
+apt install iperf
+
+A				B
+
+iperf -c [ip B]			iperf -s
+iperf -c [ip B] -u		iperf -s -u
+iperf -c [ip B] -d		iperf -s
+```
