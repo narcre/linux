@@ -24,4 +24,5 @@ sudo chown -R esmaeili:esmaeili *
 ```
 sudo visudo
 username ALL=(ALL) NOPASSWD: ALL
+%reza ALL=(ALL) NOPASSWD:ALL
 ```
