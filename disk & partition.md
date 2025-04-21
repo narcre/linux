@@ -1,3 +1,11 @@
+```
+1- reformat disk
+2- create /boot to create /boot and /boot/efi for boot 2G
+3- create unformatted on all free space of disk to create partition
+4- create ubuntu-vg and check partition below of disk number
+5- create lvm
+```
+
 ## info
 ```
 lsblk
