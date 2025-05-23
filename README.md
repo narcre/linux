@@ -1,3 +1,6 @@
+```
+lsblk -o NAME,UUID,MOUNTPOIN
+```
 ## lsmod
 
 ## dmesg
