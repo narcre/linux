@@ -26,3 +26,13 @@ sudo visudo
 username ALL=(ALL) NOPASSWD: ALL
 %reza ALL=(ALL) NOPASSWD:ALL
 ```
+### permistion
+```
+deluser b sudo
+groupadd diskaccess
+usermod -aG diskaccess username
+chown :diskaccess /disk
+chmod 770 /disk
+#read only
+chmod 750 /disk
+```
