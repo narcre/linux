@@ -1,3 +1,59 @@
+sample senario
+```
+before:
+
+vda                       252:0    0   25G  0 disk 
+├─vda1                    252:1    0    1M  0 part 
+├─vda2                    252:2    0    2G  0 part /boot
+└─vda3                    252:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 253:0    0   23G  0 lvm
+
+df -h
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              392M  1.4M  390M   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   23G   17G  5.1G  77% /
+
+
+after:
+
+vda                       252:0    0   25G  0 disk 
+├─vda1                    252:1    0    1M  0 part 
+├─vda2                    252:2    0    2G  0 part /boot
+└─vda3                    252:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 253:0    0   23G  0 lvm  /
+vdb                       252:16   0   20G  0 disk 
+
+
+
+
+parted /dev/vdb -- mklabel gpt
+parted /dev/vdb -- mkpart primary 0% 100%
+pvcreate /dev/vdb1
+vgextend ubuntu-vg /dev/vdb1
+lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
+resize2fs /dev/ubuntu-vg/ubuntu-lv
+
+#if using xfs
+xfs_growfs /
+
+
+df -h
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              392M  1.4M  390M   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   43G   17G   24G  41% /
+
+
+vda                       252:0    0   25G  0 disk 
+├─vda1                    252:1    0    1M  0 part 
+├─vda2                    252:2    0    2G  0 part /boot
+└─vda3                    252:3    0   23G  0 part 
+  └─ubuntu--vg-ubuntu--lv 253:0    0   43G  0 lvm  /
+vdb                       252:16   0   20G  0 disk 
+└─vdb1                    252:17   0   20G  0 part 
+  └─ubuntu--vg-ubuntu--lv 253:0    0   43G  0 lvm  /
+
+```
+
 ```
 1- reformat disk
 2- create /boot to create /boot and /boot/efi for boot 2G
