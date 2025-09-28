@@ -1,4 +1,16 @@
-sample senario
+# folder access
+```
+mkdir /disk
+sudo groupadd diskaccess
+sudo usermod -aG diskaccess a
+sudo chown :diskaccess /disk
+#read/write
+sudo chmod 770 /disk
+#read only
+sudo chmod 750 /disk
+```
+
+# sample senario
 ```
 before:
 
@@ -140,10 +152,25 @@ p
 w
 ```
 ```
-pv  create ->
-if donot have pv ->
-fdisk => use n => for create new partition in existing pv =>  vgextend [existing volume group newpartion] => for extend size of volume group => extend existing lvm size by => lvextend -l +100%FREE -r [lvm name] ==> get lvm name => with lvdisplay
+1) pv  create
+2) if donot have pv 
+3) fdisk  use n
+4) for create new partition in existing pv
+5) vgextend [existing volume group newpartion]
+6) for extend size of volume group
+7) extend existing lvm size by
+8) lvextend -l +100%FREE -r [lvm name]
+9) get lvm name
+10) with lvdisplay
 ```
 ```
 #نکته : درصورتیکه سایز پارتیشن قبلی افزایش داده شود بازهم امکان تغییر vg نیست تازمانیکه پارتیشن جدیدی در pv ایجاد گردد و vg اکستند شود
+```
+# sample command for tshoot
+```
+smartctl -a /dev/sdX
+lvdisplay /dev/cinder-volumes/volume-<UUID>
+iscsiadm -m session
+multipath -ll
+dmsetup ls --tree
 ```
