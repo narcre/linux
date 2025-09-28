@@ -36,3 +36,8 @@ chmod 770 /disk
 #read only
 chmod 750 /disk
 ```
+# delete user
+```
+sudo deluser b sudo
+groups b
+```
